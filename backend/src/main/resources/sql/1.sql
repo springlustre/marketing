@@ -1,0 +1,10 @@
+
+CREATE TABLE public.user_bind_info
+(
+    id SERIAL PRIMARY KEY NOT NULL,
+    openId VARCHAR(100) DEFAULT '' NOT NULL,
+    nickname VARCHAR(200) DEFAULT '' NOT NULL,
+    headImg VARCHAR(200) DEFAULT '' NOT NULL,
+    districtId BIGINT DEFAULT 0 NOT NULL,
+    createTime BIGINT DEFAULT 0 NOT NULL
+);
