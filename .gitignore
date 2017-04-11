@@ -84,3 +84,13 @@ frontend/target
 project/project/
 shared/.js/
 shared/.jvm/
+backend/src/main/resources/mobile/dist/
+backend/src/main/resources/mobile/img/
+backend/src/main/resources/mobile/js/
+backend/src/main/resources/pc/js/
+backend/src/main/scala/com/wangchunze/marketing/common/
+backend/src/main/scala/com/wangchunze/marketing/core/
+backend/src/main/scala/com/wangchunze/marketing/http/
+backend/src/main/scala/com/wangchunze/marketing/model/
+backend/src/main/scala/com/wangchunze/marketing/protocols/
+frontend/src/main/resources/

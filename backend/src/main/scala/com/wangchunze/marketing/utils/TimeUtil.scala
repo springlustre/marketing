@@ -1,4 +1,4 @@
-package com.neo.sk.feeler3.utils
+package com.wangchunze.marketing.utils
 
 import java.sql.Date
 import java.text.SimpleDateFormat
@@ -39,13 +39,21 @@ object TimeUtil {
     * @param date 格式：20160518
     */
   def parseDate(date:String)={
-    val year=date.take(4).toInt
-    val month=date.slice(4,6)
-    val day=date.takeRight(2)
+    val (year,month,day) = if(date.contains("/")){
+      val d = date.trim.replace(" ","").split("/")
+      (d(0),d(1),d(2))
+    }else if(date.contains("-")){
+      val d = date.trim.replace(" ","").split("-")
+      (d(0),d(1),d(2))
+    }else{
+      val d = date.trim
+      (d.take(4),d.slice(4,6),d.takeRight(2))
+    }
     new SimpleDateFormat("yyyy-MM-dd")
       .parse(year+"-"+month+"-"+day)
       .getTime
   }
+
 
 
   /**
@@ -129,29 +137,10 @@ object TimeUtil {
   def main(args: Array[String]) {
     //    println(parseDate("20160518"))
     //    println(formatFromMinute(80))
-    val now = System.currentTimeMillis()
-    //    println(getDay(getLastWeek(now)._2))
-    //    println(getDay(getBeginOfDay(now) - 3*24*3600*
-//        import io.circe._
-//        import io.circe.parser._
-//        import io.circe.generic.auto._
-//        import io.circe.syntax._
-////        import com.neo.sk.rower.util.CirceSupport._
-//    //
-//
-//    case class Y(x:Long,y:Long)
-//        case class A(data:Seq[Json],x:String)
-//        case class B(data:Seq[Y],x:String)
-//        val z = Seq[Y](Y(1,1),Y(1,2))
-//        val a = A(z.map(_.asJson),"123")
-//        val b = B(z,"123")
-//        val x = a.asJson.noSpaces
-//        val y = b.asJson.noSpaces
-//        println(s"x=$x,y=$y")
-//
-//    val s = s"2017-02-01"
-//    println(TimeUtil.format(TimeUtil.getMonthEnd(TimeUtil.parseDate("20160401")) -1000,"yyyyMMdd"))
-
+//    val now = System.currentTimeMillis()
+//    println(parseDate("20160302"))
+//    println(parseDate("2016-03-02"))
+//    println(parseDate("2016/03 /02"))
 
   }
 

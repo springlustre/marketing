@@ -1,4 +1,4 @@
-package com.neo.sk.feeler3.utils
+package com.wangchunze.marketing.utils
 
 import java.math.BigInteger
 import java.net.{URLDecoder, URLEncoder}

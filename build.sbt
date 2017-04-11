@@ -39,6 +39,13 @@ def commonSettings = Seq(
 lazy val shared = (crossProject.crossType(CrossType.Pure) in file("shared"))
   .settings(name := "shared")
   .settings(commonSettings: _*)
+  .settings(
+    libraryDependencies ++= Seq(
+      "io.circe" %%% "circe-core" % circeVersion,
+      "io.circe" %%% "circe-generic" % circeVersion,
+      "io.circe" %%% "circe-parser" % circeVersion
+    )
+  )
 
 
 lazy val sharedJvm = shared.jvm

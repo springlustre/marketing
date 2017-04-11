@@ -1,7 +1,6 @@
 package com.neo.sk.feeler3.frontend
 
 
-import com.neo.sk.feeler3.frontend.business._
 import org.scalajs.dom
 import org.scalajs.dom.html.Heading
 
@@ -61,34 +60,6 @@ object Hub extends js.JSApp{
       paths(0) match {
 
         case "pc" => paths(1) match {
-          case "userlist" => UserList.render()
-          case "userdetail" =>UserDetail.render()
-          case "shoplist" => ShopList.render()
-          case "shopdetail" => ShopDetail.render()
-          case "login" => Login.render()
-          case x => todo(s"user match error: ${paths.mkString("/")}")
-        }
-
-        case "data" => paths(1) match {
-          case "dataByday" => databyDay.render()
-          case "dataByWeek" => databyWeek.render()
-          case "dataByMonth" => databyMonth.render()
-          case x => todo(s"user match error: ${paths.mkString("/")}")
-        }
-        case "hongTest" => paths(1) match {
-          case "list" => business.BusinessShopList.render()
-          case x => todo(s"user match error: ${paths.mkString("/")}")
-        }
-
-        case "business" => paths(1) match {
-          case "main" => MainPage.render()
-          case "login" => UserLogin.render()
-          case "mobileConfirm" => MobileComfirm.render()
-          case x => todo(s"user match error: ${paths.mkString("/")}")
-        }
-
-        case "weixin" => paths(1) match {  //微信授权页面
-          case "mobileConfirm" => MobileComfirm.render()
           case x => todo(s"user match error: ${paths.mkString("/")}")
         }
 

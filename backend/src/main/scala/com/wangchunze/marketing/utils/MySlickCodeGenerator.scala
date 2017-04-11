@@ -20,9 +20,9 @@ object MySlickCodeGenerator {
   val outputFolder = "target/gencode/genTablesPsql"
   val pkg = "com.neo.sk.threeMall.models"
 
-  val url = "jdbc:mysql://125.35.60.205:3306/miami?characterEncoding=utf-8"
-  val user = "blast"
-  val password = "blast234"
+  val url = "jdbc:mysql://139.129.25.229:3306/db_Hotel?useUnicode=true&characterEncoding=utf-8"
+  val user = "hotel"
+  val password = "hotel123"
 
 
   //val dbDriver = MySQLDriver
@@ -65,8 +65,8 @@ object MySlickCodeGenerator {
     slick.codegen.SourceCodeGenerator.main(
       Array(slickProfile, jdbcDriver, url, outputFolder, pkg, user, password)
     )
-
   }
+
 
 
   def main(args: Array[String]) {
