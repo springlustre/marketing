@@ -1,6 +1,6 @@
 package com.wangchunze.marketing.ptcl
 
-import com.wangchunze.marketing.ptcl.RoomProtocol.RoomInfo
+import com.wangchunze.marketing.ptcl.RoomProtocol.{Room, RoomPackage}
 
 /**
   * Created by springlustre on 2017/4/12.
@@ -29,7 +29,6 @@ object OrderProtocol {
     hotelId:Long,
     roomId:Long,
     packageId:Long,
-    roomInfo:RoomInfo,
     dateStart:String,
     dateEnd:String,
     comeTime:Long,
@@ -40,12 +39,31 @@ object OrderProtocol {
     userIdentifyNum:String,
     invoice:String,
     remark:String,
-    createTime:Long
+    createTime:Long,
+    roomInfo:Room,
+    packageInfo:RoomPackage
   )
 
 
   case class OrderCreateSuc(
     data:OrderInfo,
+    msg: String = "ok",
+    errCode: Int = 0
+  )
+
+  case class OrderBrief(
+    id:Long,
+    dateStart:String,
+    dateEnd:String,
+    totalPrice:Double,
+    remark:String,
+    createTime:String,
+    roomInfo:Room,
+    packageInfo:RoomPackage
+  )
+
+  case class ListOrderBrief(
+    data:Seq[OrderBrief],
     msg: String = "ok",
     errCode: Int = 0
   )

@@ -15,6 +15,22 @@ object RoomProtocol {
     price:Double
   )
 
+  case class Room(
+    id:Long,
+    hotelId:Long,
+    name:String,
+    logo:String,
+    description:JsonObject
+  )
+  case class RoomPackage(
+    id:Long,
+    hotelId:Long,
+    roomId:Long,
+    title:String,
+    img:String,
+    description:JsonObject
+  )
+
   case class PackageInfo(
     id:Long,
     hotelId:Long,
