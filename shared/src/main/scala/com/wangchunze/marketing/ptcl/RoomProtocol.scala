@@ -1,6 +1,7 @@
 package com.wangchunze.marketing.ptcl
 
 
+import com.wangchunze.marketing.ptcl.HotelProtocol.RestResponse
 import io.circe.generic.auto._
 import io.circe._
 

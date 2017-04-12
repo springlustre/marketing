@@ -1,5 +1,7 @@
 package com.wangchunze.marketing.ptcl
 
+import io.circe.{Json, JsonObject}
+import io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._
 /**
   * Created by springlustre on 2017/4/10.
   */
@@ -40,8 +42,12 @@ object HotelProtocol {
     data:HotelInfo,
     msg: String = "ok",
     errCode: Int = 0
-  )
+  ) extends RestResponse
 
+
+  case class Jsonp(
+    success_hotel:Json
+  )
 
 
 
