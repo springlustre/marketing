@@ -29,7 +29,8 @@ CREATE TABLE db_Hotel.hotel
   create_time BIGINT DEFAULT 0 NOT NULL COMMENT '创建时间',
   mark DOUBLE DEFAULT 0.0 NOT NULL COMMENT '评分',
   comment_num int DEFAULT 0 NOT NULL COMMENT '评论数',
-  description VARCHAR(3000) DEFAULT "" NOT NULL COMMENT '描述'
+  description VARCHAR(3000) DEFAULT "" NOT NULL COMMENT '描述',
+  account_id BIGINT DEFAULT 0 NOT NULL
 );
 
 CREATE TABLE db_Hotel.room
@@ -100,5 +101,16 @@ CREATE TABLE db_Hotel.room_price
 ALTER TABLE db_Hotel.room_price ADD INDEX(hotel_id);
 ALTER TABLE db_Hotel.room_price ADD INDEX(room_id);
 ALTER TABLE db_Hotel.room_price ADD INDEX(package_id);
+
+#账户
+CREATE TABLE db_Hotel.account
+(
+  id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  email VARCHAR(100) DEFAULT "" NOT NULL,
+  mobile VARCHAR(20) DEFAULT "" NOT NULL ,
+  password VARCHAR(50) DEFAULT "" NOT NULL,
+  u_type INT DEFAULT 1 NOT NULL ,
+  create_time BIGINT DEFAULT 0 NOT NULL
+);
 
 

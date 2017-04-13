@@ -45,8 +45,17 @@ object HotelProtocol {
   ) extends RestResponse
 
 
-  case class Jsonp(
-    success_hotel:Json
+  case class CreateHotelRst(
+    name:String,
+    logo:String,
+    img:String,
+    address:String,
+    longitude:Double,
+    latitude:Double,
+    phone:String,
+    star:Int,
+    openTime:Long,
+    description:String
   )
 
 
