@@ -65,6 +65,15 @@ object RoomProtocol {
   )
 
 
+  /***** for business ***/
+  case class CreateRoomRst(
+    hotelId:Long,
+    name:String,
+    logo:String,
+    img:String,
+    stock:Int,
+    description:String
+  )
 
 
 }
