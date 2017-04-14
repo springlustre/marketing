@@ -27,7 +27,7 @@ server for hotel booking system, developed by akka-http
 
 4、http://139.129.25.229:1121/marketing/order/getMyOrder
 
-
+5、http://localhost:1121/marketing/order/getDetail?orderId=1 获取订单详情
 
 ## for business
 1、login http://localhost:1121/marketing/account/login?login=test@test&password=test@test

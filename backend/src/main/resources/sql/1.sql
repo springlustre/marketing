@@ -73,7 +73,7 @@ CREATE TABLE db_Hotel.order
   package_id BIGINT DEFAULT 0 NOT NULL,
   from_time BIGINT DEFAULT 0 NOT NULL,
   leave_time BIGINT DEFAULT 0 NOT NULL,
-  come_time BIGINT DEFAULT 0 NOT NULL COMMENT '到达时间',
+  come_time VARCHAR(50) DEFAULT "" NOT NULL COMMENT '到达时间',
   total_price DOUBLE DEFAULT 0.0 NOT NULL COMMENT '总价',
   remain_price DOUBLE DEFAULT 0.0 NOT NULL COMMENT '待付款',
   price_info VARCHAR(200) DEFAULT "" NOT NULL COMMENT '价格详情',

@@ -141,6 +141,7 @@ object TimeUtil {
 //    println(parseDate("20160302"))
 //    println(parseDate("2016-03-02"))
 //    println(parseDate("2016/03 /02"))
+    println(format(System.currentTimeMillis(),"yyyy-MM-dd HH:00:00"))
 
   }
 

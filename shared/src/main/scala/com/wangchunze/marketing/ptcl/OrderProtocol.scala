@@ -14,7 +14,7 @@ object OrderProtocol {
     packageId:Long,
     dateStart:String,
     dateEnd:String,
-    comeTime:Long,
+    comeTime:String,
     totalPrice:Double,
     priceInfo:String,
     userName:String,
@@ -31,7 +31,7 @@ object OrderProtocol {
     packageId:Long,
     dateStart:String,
     dateEnd:String,
-    comeTime:Long,
+    comeTime:String,
     totalPrice:Double,
     priceInfo:String,
     userName:String,
@@ -53,6 +53,7 @@ object OrderProtocol {
 
   case class OrderBrief(
     id:Long,
+    roomId:Long,
     dateStart:String,
     dateEnd:String,
     totalPrice:Double,
@@ -67,5 +68,12 @@ object OrderProtocol {
     msg: String = "ok",
     errCode: Int = 0
   )
+
+  case class OrderDetailRsp(
+    data:OrderInfo,
+    msg: String = "ok",
+    errCode: Int = 0
+  )
+
 
 }
