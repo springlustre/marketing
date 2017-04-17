@@ -82,7 +82,9 @@ CREATE TABLE db_Hotel.order
   user_identify_num VARCHAR(30) DEFAULT "" NOT NULL,
   invoice VARCHAR(200) DEFAULT "" NOT NULL COMMENT '发票',
   remark VARCHAR(500) DEFAULT "" NOT NULL COMMENT '备注',
-  create_time BIGINT DEFAULT 0 NOT NULL COMMENT '创建时间'
+  create_time BIGINT DEFAULT 0 NOT NULL COMMENT '创建时间',
+  room_num INT DEFAULT 1 NOT NULL,
+  stay_days INT DEFAULT 1 NOT NULL
 );
 ALTER TABLE db_Hotel.order ADD INDEX(user_id);
 ALTER TABLE db_Hotel.order ADD INDEX(hotel_id);

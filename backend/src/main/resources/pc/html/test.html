@@ -15,20 +15,35 @@
 
 //    $(function(){
 //
-//      $.ajax({
-//        type : "get",
-//        async:false,
-//        contentType:"",
-////        url : "http://localhost:1121/marketing/order/getMyOrder",
-//        url : "http://139.129.25.229:1121/marketing/hotel/getInfo?hotelId=1",
-//        dataType : "json",
-//        success : function(data){
-//          alert("sssssssssssssss"+JSON.stringify(data));
-//        },
-//        error:function(){
-//          alert('fail');
-//        }
-//      });
+      $.ajax({
+        type : "post",
+        async:false,
+        contentType:"application/json",
+        url : "http://192.168.0.103:1121/marketing/order/create",
+//        url : "http://139.129.25.229:1121/marketing/order/create",
+        dataType : "json",
+        data:JSON.stringify({
+          "hotelId":1,
+          "roomId":1,
+          "packageId":1,
+          "dateStart":"20170412",
+          "dateEnd":"20170413",
+          "comeTime":"1371234567800",
+          "totalPrice":300.2,
+          "priceInfo":"20170413:200",
+          "userName":"Íõ´ºÔó22",
+          "userMobile":"13512345678",
+          "userIdentifyNum":"132123456778992222",
+          "invoice":"Ì§Í·",
+          "remark":"±¸×¢"
+        }),
+        success : function(data){
+          alert("sssssssssssssss"+JSON.stringify(data));
+        },
+        error:function(){
+          alert('fail');
+        }
+      });
 //    });
 
 

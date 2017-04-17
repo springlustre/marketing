@@ -12,23 +12,11 @@
   <title>城市名定位</title>
 </head>
 <body>
+<div id="body"></div>
 <div id="allmap"></div>
-</body>
+<script type="text/javascript" src="/marketing/static/mobile/html/vendor.bb87569ef6aa312f537e.js"></script>
+<script type="text/javascript" src="/marketing/static/mobile/html/c_map.bb87569ef6aa312f537e.js"></script></body>
 </html>
 <script type="text/javascript">
-  // 百度地图API功能
-  var map = new BMap.Map("allmap");
-  map.centerAndZoom(new BMap.Point(116.331398,39.897445),11);
-  map.enableScrollWheelZoom(true);
 
-  // 用经纬度设置地图中心点
-  function theLocation(x,y){
-      map.clearOverlays();
-      var new_point = new BMap.Point(x,y);
-      var marker = new BMap.Marker(new_point);  // 创建标注
-      map.addOverlay(marker);              // 将标注添加到地图中
-      map.panTo(new_point);
-  }
-
-  theLocation(117,40);
 </script>

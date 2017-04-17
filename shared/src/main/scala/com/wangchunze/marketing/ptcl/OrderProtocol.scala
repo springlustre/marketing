@@ -21,7 +21,9 @@ object OrderProtocol {
     userMobile:String,
     userIdentifyNum:String,
     invoice:String,
-    remark:String
+    remark:String,
+    roomNum:Int,
+    stayDays:Int
   )
 
   case class OrderInfo(
@@ -41,7 +43,9 @@ object OrderProtocol {
     remark:String,
     createTime:Long,
     roomInfo:Room,
-    packageInfo:RoomPackage
+    packageInfo:RoomPackage,
+    roomNum:Int,
+    stayDays:Int
   )
 
 
@@ -60,7 +64,9 @@ object OrderProtocol {
     remark:String,
     createTime:String,
     roomInfo:Room,
-    packageInfo:RoomPackage
+    packageInfo:RoomPackage,
+    roomNum:Int,
+    stayDays:Int
   )
 
   case class ListOrderBrief(

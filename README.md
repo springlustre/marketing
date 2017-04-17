@@ -48,6 +48,20 @@ server for hotel booking system, developed by akka-http
  }
  ```
  
- 3、
+ 3、create room  http://localhost:1121/marketing/room/create
+ 
+ ```aidl
+{
+	"hotelId":1,
+    "name":"豪华间",
+    "logo":"http://pavo.elongstatic.com/i/Hotel120_120/0000gmP6.jpg",
+    "img":"http://pavo.elongstatic.com/i/Hotel120_120/0000gmP6.jpg",
+    "stock":30,
+    "description":"面积:30,床数:2,尺寸:2m"
+}
+```
+ 
+
+ 
  
  
