@@ -36,7 +36,7 @@ object TimeUtil {
 
   /**
     * 日期转时间戳
-    * @param date 格式：20160518
+    * @param date 格式：20160518 2017/04/18  2017-04-18
     */
   def parseDate(date:String)={
     val (year,month,day) = if(date.contains("/")){

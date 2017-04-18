@@ -75,11 +75,18 @@ object RoomProtocol {
     description:String
   )
 
-//  case class SetPrice(
-//    hotelId:Long,
-//    roomId:List[Long],
-//
-//  )
+  case class RoomPrice(
+    roomId:Long,
+    packageId:Long,
+    price:Double
+  )
+
+  case class SetPrice(
+    hotelId:Long,
+    roomList:List[RoomPrice],
+    startTime:String,
+    endTime:String
+  )
 
 
 }

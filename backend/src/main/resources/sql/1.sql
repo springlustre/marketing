@@ -84,7 +84,8 @@ CREATE TABLE db_Hotel.order
   remark VARCHAR(500) DEFAULT "" NOT NULL COMMENT '备注',
   create_time BIGINT DEFAULT 0 NOT NULL COMMENT '创建时间',
   room_num INT DEFAULT 1 NOT NULL,
-  stay_days INT DEFAULT 1 NOT NULL
+  stay_days INT DEFAULT 1 NOT NULL,
+  state INT DEFAULT 0 NOT NULL  COMMENT '0未确认 1已确认 2已入住 3已离店 -1失败 -2拒绝'
 );
 ALTER TABLE db_Hotel.order ADD INDEX(user_id);
 ALTER TABLE db_Hotel.order ADD INDEX(hotel_id);

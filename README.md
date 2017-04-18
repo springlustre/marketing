@@ -61,6 +61,18 @@ server for hotel booking system, developed by akka-http
 }
 ```
 
+4,setPrice http://localhost:1121/marketing/room/setPrice
+```aidl
+{
+	"hotelId":1,
+    "roomList":[{"roomId":1,"packageId":1,"price":100},{"roomId":2,"packageId":2,"price":100},{"roomId":3,"packageId":3,"price":100}],
+    "startTime":"20170419",
+    "endTime":"20170425"
+}
+```
+
+5,list orderList  
+
 
  
 
