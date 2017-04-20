@@ -35,7 +35,7 @@ server for hotel booking system, developed by akka-http
 2、create hotel: http://localhost:1121/marketing/hotel/create
 ```
  {
- 	"name": "testName",
+ 	   "name": "testName",
      "logo": "http://p3.so.qhimgs1.com/bdr/_240_/t01b0bc44b5cc8236f3.jpg",
      "img": "http://p3.so.qhimgs1.com/bdr/_240_/t01b0bc44b5cc8236f3.jpg",
      "address": "test address",
@@ -43,7 +43,7 @@ server for hotel booking system, developed by akka-http
      "latitude": 40,
      "phone": "010-12345678",
      "star": 3,
-     "openTime": 0,
+     "openTime": "2017-04-20",
      "description": "停车场:免费"
  }
  ```
@@ -71,9 +71,35 @@ server for hotel booking system, developed by akka-http
 }
 ```
 
-5,list orderList  
+5,modify hotel  http://localhost:1121/marketing/hotel/modify
 
+```
+ {
+     "id":1,
+     "name": "testName",
+     "logo": "http://p3.so.qhimgs1.com/bdr/_240_/t01b0bc44b5cc8236f3.jpg",
+     "img": "http://p3.so.qhimgs1.com/bdr/_240_/t01b0bc44b5cc8236f3.jpg",
+     "address": "test address",
+     "longitude": 137,
+     "latitude": 40,
+     "phone": "010-12345678",
+     "star": 3,
+     "openTime": "2017-04-20",
+     "description": "停车场:免费"
+ }
+ ```
 
+6、modify room  http://localhost:1121/marketing/room/modify
+ ```aidl
+{
+	"roomId":4,
+    "name":"超豪华间",
+    "logo":"http://pavo.elongstatic.com/i/Hotel120_120/0000gmP6.jpg",
+    "img":"http://pavo.elongstatic.com/i/Hotel120_120/0000gmP6.jpg",
+    "stock":30,
+    "description":"面积:30,床数:2,尺寸:2m"
+}
+```
  
 
  

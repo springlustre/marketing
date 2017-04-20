@@ -75,6 +75,15 @@ object RoomProtocol {
     description:String
   )
 
+  case class ModifyRoomRst(
+    roomId:Long,
+    name:String,
+    logo:String,
+    img:String,
+    stock:Int,
+    description:String
+  )
+
   case class RoomPrice(
     roomId:Long,
     packageId:Long,

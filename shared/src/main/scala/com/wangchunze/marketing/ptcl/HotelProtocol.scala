@@ -32,7 +32,7 @@ object HotelProtocol {
     phone:String,
     state:Int,
     star:Int,
-    openTime:Long,
+    openTime:String,
     mark:Double,
     commentNum:Int,
     description:String
@@ -54,10 +54,23 @@ object HotelProtocol {
     latitude:Double,
     phone:String,
     star:Int,
-    openTime:Long,
+    openTime:String,
     description:String
   )
 
+  case class ModifyHotelRst(
+    id:Long,
+    name:String,
+    logo:String,
+    img:String,
+    address:String,
+    longitude:Double,
+    latitude:Double,
+    phone:String,
+    star:Int,
+    openTime:String, //2017-04-20
+    description:String
+  )
 
 
 
