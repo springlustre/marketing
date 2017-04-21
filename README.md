@@ -100,8 +100,12 @@ server for hotel booking system, developed by akka-http
     "description":"面积:30,床数:2,尺寸:2m"
 }
 ```
- 
+7、list room by business
+   http://localhost:1121/marketing/room/listByBusiness?hotelId=1
 
+ 返回数据和c端list接口一样
+ 
+ 
  
  
  
