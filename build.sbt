@@ -123,7 +123,10 @@ lazy val backend = (project in file("backend"))
       "com.softwaremill.akka-http-session" %% "core" % sessionV,
       "com.softwaremill.akka-http-session" %% "jwt"  % sessionV,
       "net.glxn.qrgen" % "javase" % "2.0",
-      "ch.megard" %% "akka-http-cors" % "0.2.1"
+      "ch.megard" %% "akka-http-cors" % "0.2.1",
+//      "org.apache.httpcomponents" % "httpmime" % "4.2",
+//      "org.apache.httpcomponents" % "httpclient" % "4.2.1",
+      "com.qiniu" % "qiniu-java-sdk" % "7.2.0"
     )
   )
   .settings( // fastOptJS generate

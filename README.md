@@ -92,7 +92,7 @@ server for hotel booking system, developed by akka-http
 6、modify room  http://localhost:1121/marketing/room/modify
  ```aidl
 {
-	"roomId":4,
+	  "roomId":4,
     "name":"超豪华间",
     "logo":"http://pavo.elongstatic.com/i/Hotel120_120/0000gmP6.jpg",
     "img":"http://pavo.elongstatic.com/i/Hotel120_120/0000gmP6.jpg",
@@ -106,6 +106,8 @@ server for hotel booking system, developed by akka-http
  返回数据和c端list接口一样
  
  
- 
- 
+8、图片上传
+   post  http://localhost:1121/marketing/picture/upload
+   
+   formdata key:picture
  
