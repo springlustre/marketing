@@ -73,5 +73,11 @@ object HotelProtocol {
   )
 
 
+  case class PicRsp(
+    data:String,
+    msg: String = "ok",
+    errCode: Int = 0
+  )extends RestResponse
+
 
 }

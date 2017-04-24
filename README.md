@@ -111,3 +111,14 @@ server for hotel booking system, developed by akka-http
    
    formdata key:picture
  
+9、订单列表
+
+0未确认 1已确认 2已入住 3已离店 -1失败 -2拒绝
+
+http://localhost:1121/marketing/order/listOrder?hotelId=1&state=0
+
+10、订单操作
+
+state:0未确认 1已确认 2已入住 3已离店 -1失败 -2拒绝
+
+http://localhost:1121/marketing/order/changeState?orderId=1&state=1

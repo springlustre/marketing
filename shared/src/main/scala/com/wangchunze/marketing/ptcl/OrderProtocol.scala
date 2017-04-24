@@ -45,7 +45,8 @@ object OrderProtocol {
     roomInfo:Room,
     packageInfo:RoomPackage,
     roomNum:Int,
-    stayDays:Int
+    stayDays:Int,
+    state:String
   )
 
 
@@ -66,7 +67,8 @@ object OrderProtocol {
     roomInfo:Room,
     packageInfo:RoomPackage,
     roomNum:Int,
-    stayDays:Int
+    stayDays:Int,
+    state:String
   )
 
   case class ListOrderBrief(
