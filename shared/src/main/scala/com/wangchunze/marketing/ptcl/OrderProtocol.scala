@@ -68,7 +68,9 @@ object OrderProtocol {
     packageInfo:RoomPackage,
     roomNum:Int,
     stayDays:Int,
-    state:String
+    state:String,
+    userName:String = "",
+    userMobile:String = ""
   )
 
   case class ListOrderBrief(
